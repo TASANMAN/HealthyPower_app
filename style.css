@@ -1,0 +1,169 @@
+/* Paleta de colores */
+:root {
+  --green-primary: #4caf50; /* Verde claro */
+  --green-secondary: #388e3c; /* Verde más oscuro */
+  --white: #ffffff;
+  --gray-dark: #333333;
+  --gray-light: #f0f0f0;
+}
+
+/* Estilo del cuerpo */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  box-sizing: border-box;
+}
+
+/* Cabecera (Pantalla de Inicio) */
+
+header.hero {
+  background-image: url('./IMG/Fondo.png'); /* Ruta local a la imagen */
+  background-color: #388e3c;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
+  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--white); /* Título blanco */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: var(--white); /* Subtítulo blanco */
+}
+
+header.hero {
+  position: relative;
+}
+
+header.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Capa oscura para mejorar legibilidad del texto */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--green-secondary); /* Botón con verde oscuro */
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--green-primary); /* Efecto hover con verde claro */
+}
+
+/* Sección de Características */
+/* Sección de Características */
+.features-section {
+  background-color: #e8f5e9; /* Verde claro */
+  color: var(--gray-dark);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--green-secondary); /* Título de sección verde oscuro */
+  margin-bottom: 30px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background-color: var(--green-primary); /* Fondo verde principal */
+  color: var(--white); /* Texto blanco */
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--white); /* Título blanco */
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 80%;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: var(--green-secondary); /* Fondo verde oscuro */
+  text-align: center;
+  padding: 20px;
+  color: var(--white); /* Texto blanco */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 80%;
+  }
+}
